@@ -209,11 +209,11 @@ else:
     url = "github.com"
 
 # See get_type function for other possibilities for first argument
-message = build_message("A", "tmz.com") 
+message = build_message("A", url) 
 print("Request:\n" + message)
 print("\nRequest (decoded):" + decode_message(message))
 
 # second argument is external DNS server, third argument is port
-response = send_udp_message(message, "91.245.229.1", 53)
+response = send_udp_message(message, "1.1.1.1", 53)
 print("\nResponse:\n" + response)
 print("\nResponse (decoded):" + decode_message(response))
